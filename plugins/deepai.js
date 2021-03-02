@@ -81,11 +81,11 @@ Asena.addCommand({pattern: 'waifuai', fromMe: false, deleteCommand: false, dontA
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'superai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Enhancing.. 🖌️',MessageType.text);
@@ -111,11 +111,11 @@ Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAd
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
     var resp = await deepai.callStandardApi("sentiment-analysis", {
@@ -127,7 +127,7 @@ Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, d
 
 }));
 
-Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'dreamai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Starry Night.. 🌃',MessageType.text);
@@ -153,11 +153,11 @@ Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAd
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'neuraltalkai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'neuraltalkai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Reading.. 🙇🏻',MessageType.text);
@@ -181,11 +181,11 @@ Asena.addCommand({pattern: 'neuraltalkai', fromMe: true, deleteCommand: false, d
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
     var resp = await deepai.callStandardApi("text2img", {
@@ -199,7 +199,7 @@ Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, do
 
 }));
 
-Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'toonai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Tooning.. 🌟',MessageType.text);
@@ -225,11 +225,11 @@ Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAdd
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'nudityai', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'nudityai', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Finding NSFW.. 🔥',MessageType.text);
@@ -253,11 +253,11 @@ Asena.addCommand({pattern: 'nudityai', fromMe: true, deleteCommand: false, dontA
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
 
-Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'textai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.TEXT);
 
     var resp = await deepai.callStandardApi("text-generator", {
@@ -269,7 +269,7 @@ Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, d
 
 }));
 
-Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+Asena.addCommand({pattern: 'ganstyle', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
 
     var downloading = await message.client.sendMessage(message.jid,'Creating.. ♻️',MessageType.text);
@@ -296,6 +296,6 @@ Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontA
 
         });
 
-        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: false})
 
 }));
